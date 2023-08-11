@@ -4,7 +4,7 @@ import { HeaderWrap } from "./headerStyle";
 const Header = () => {
   return(
   <>
-    <HeaderWrap>test</HeaderWrap>
+    <HeaderWrap>header</HeaderWrap>
   </>
   )
 };
