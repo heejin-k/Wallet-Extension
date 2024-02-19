@@ -11,22 +11,26 @@ ${reset}
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+html{
+    font-size: 10px;
+    width: 36rem;
+    height: 60rem;
+    background: var(--DarkMode-Grey_900, #212121);
+}
+
 a {
     text-decoration: none;
     color: black;
 }
 
 button{
-    display: flex;
     cursor: pointer;
     outline: none;
-    border-radius: 3px;
+    border: 0;
 }
 
 input{
-    display: flex;
     outline: none;
-    padding-left: 10px;
 }
 
 `;
