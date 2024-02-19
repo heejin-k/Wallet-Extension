@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import Router from 'router/router';
-import { Header } from 'components';
+import { Header } from 'components/module';
 
 function App() {
   return (
     <div className="App">
-        <Header></Header>
-        <Router />
+      <Header />
+      <Router />
     </div>
   );
 }

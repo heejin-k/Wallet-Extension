@@ -1,4 +1,4 @@
 export const palette = {
-  pointColor: "#6800BA",
-  backgroundColor: "#EFEDFF",
+  pointColor: '#6800BA',
+  backgroundColor: '#EFEDFF',
 };
