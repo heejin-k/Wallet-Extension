@@ -1,8 +1,11 @@
-import React from "react";
+import React from 'react';
+import TestPage from './TestPage';
 
 export function HomePage() {
-  return(
-    <h2>homepage</h2>
-  )
+  return (
+    <>
+      <TestPage />
+    </>
+  );
 }
 export default HomePage;
