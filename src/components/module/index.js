@@ -1,1 +1,1 @@
-export { default as Header } from 'components/module/header/Header';
+export { default as GnbBar } from 'components/module/gnb/GnbBar';
