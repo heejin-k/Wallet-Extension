@@ -10,7 +10,7 @@ import styled, { css } from 'styled-components';
  * @param text button text
  */
 
-const Button = ({ type, className, size, active = true, onConfirm, text }) => {
+function Button({ type, className, size, active = true, onConfirm, text }) {
   const btnClassName = active === true ? className : 'disable';
 
   return (
@@ -23,7 +23,7 @@ const Button = ({ type, className, size, active = true, onConfirm, text }) => {
       {text}
     </ComonButton>
   );
-};
+}
 
 export default Button;
 

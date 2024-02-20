@@ -2,6 +2,7 @@ import { Button, Input } from 'components/atom';
 import InputPassword from 'components/atom/inputs/InputPassword';
 import TextArea from 'components/atom/inputs/TextArea';
 import React from 'react';
+import DeleteButton from '../components/atom/buttons/DeleteButton';
 
 let inputState = '';
 export function TestPage() {
@@ -55,6 +56,7 @@ export function TestPage() {
         placeholder={'placeholder'}
         className={inputState + 'Input'}
       />
+      <DeleteButton />
     </>
   );
 }
