@@ -7,14 +7,17 @@ export const InputWrap = styled.div`
 `;
 
 export const InputTitle = styled.label`
+  display: block;
   font-weight: 500;
   font-size: 1.4rem;
-  line-height: 1.7rem;
+  line-height: normal;
   color: var(--White);
   margin-bottom: 0.8rem;
+  text-align: left;
 `;
 
-export const InputField = styled.input`
+export const InputStyle = css`
+  position: relative;
   width: 100%;
   border-radius: 6px;
   border: 1px solid var(--DarkMode-Grey_700, #363636);
@@ -30,6 +33,7 @@ export const InputField = styled.input`
   &:focus {
     border: 1px solid var(--White, #fff);
   }
+
   &.correctInput {
     border: 1px solid var(--Status-Status_Fine);
   }
@@ -44,6 +48,17 @@ export const InputField = styled.input`
     line-height: 1.9rem;
     font-weight: 500;
   }
+`;
+
+export const InputField = styled.input`
+  ${InputStyle}
+`;
+
+export const TextAreaField = styled.textarea`
+  ${InputStyle}
+  height: 12.4rem;
+  padding: 0.8rem 1.2rem;
+  resize: none;
 `;
 
 export const Unit = styled.p`
@@ -67,7 +82,7 @@ export const ErrorMessegg = styled.p`
   padding-left: 2.4rem;
   height: 1.6rem;
 
-  &::after {
+  &::before {
     content: '';
     background: url(${ErrorIcon});
     width: 1.6rem;
@@ -80,7 +95,7 @@ export const ErrorMessegg = styled.p`
 
   &.correct {
     color: var(--Status-Status_Fine);
-    &::after {
+    &::before {
       background: url(${CheckIcon});
     }
   }

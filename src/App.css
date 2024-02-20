@@ -1,9 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css'); /*Pretendard*/
 
-.App {
-  text-align: center;
-}
-
 :root {
   --White: #ffffff;
   --DarkMode-Grey_300: #aaaaaa;
