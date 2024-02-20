@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { ErrorIcon, CheckIcon } from 'assets';
+import { ErrorIcon, CheckIcon, EyeDisabled, EyeVisible } from 'assets';
 
 export const InputWrap = styled.div`
   width: 100%;
@@ -61,14 +61,24 @@ export const TextAreaField = styled.textarea`
   resize: none;
 `;
 
-export const Unit = styled.p`
+export const VisibleButton = styled.button`
   position: absolute;
-  right: 1.6rem;
-  bottom: 1rem;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
-  color: var(--gray-color-200);
+  right: 1.2rem;
+  transform: translate(0, 50%);
+
+  &.EyeVisible {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: url(${EyeVisible}) no-repeat center center;
+  }
+
+  &.EyeVisibleOff {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: url(${EyeDisabled}) no-repeat center center;
+  }
 `;
 
 export const ErrorMessegg = styled.p`

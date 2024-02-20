@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   InputWrap,
   InputTitle,
   InputField,
-  Unit,
-  Disabled,
   ErrorMessegg,
+  VisibleButton,
 } from './InputStyle';
 
 export function Input({
@@ -16,36 +15,35 @@ export function Input({
   inputState = '',
   errorMsg = '',
   unit = '',
+  isVisible = false,
   disabled = false,
+  type,
   ...restProps
 }) {
+  const [inputType, setInputType] = useState(type);
   const isCorrect = inputState === 'correct';
   const isError = inputState === 'error';
-  const isUnknown = inputState === 'unknown';
+  let visible = inputType === 'password' ? 'EyeVisibleOff' : 'EyeVisible';
 
+  function setVisible() {
+    const newType = inputType === 'password' ? 'text' : 'password';
+    setInputType(newType);
+  }
   return (
     <InputWrap>
-      <InputTitle htmlFor={id}>{inputTitle}</InputTitle>
+      {inputTitle && <InputTitle htmlFor={id}>{inputTitle}</InputTitle>}
       <InputField
+        type={inputType}
         id={id}
         className={`${className} ${disabled ? 'disabled' : ''} ${
-          isCorrect
-            ? 'correctInput'
-            : isError
-            ? 'errorInput'
-            : isUnknown
-            ? 'unknownInput'
-            : ''
+          isCorrect ? 'correctInput' : isError ? 'errorInput' : ''
         }`}
         value={value}
         {...restProps}
-        autoComplete="new-password"
       />
-      {/* <div>
-        {unit !== '' && (
-          <Unit className={`${disabled ? 'disabled' : ''}`}>{unit}</Unit>
-        )}
-      </div> */}
+      {isVisible && (
+        <VisibleButton className={visible} onClick={setVisible}></VisibleButton>
+      )}
       {inputState !== '' && (
         <ErrorMessegg className={inputState}>{errorMsg}</ErrorMessegg>
       )}
