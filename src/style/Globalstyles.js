@@ -16,6 +16,7 @@ html{
     width: 36rem;
     height: 60rem;
     background: var(--DarkMode-Grey_900, #212121);
+    padding: 0 1.6rem;
 }
 
 a {
@@ -27,6 +28,7 @@ button{
     cursor: pointer;
     outline: none;
     border: 0;
+    background-color: transparent;
 }
 
 input{

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { ErrorIcon, CheckIcon, EyeDisabled, EyeVisible } from 'assets';
+import { errorIcon, checkIcon, eyeDisabled, eyeVisible } from 'assets';
 
 export const InputWrap = styled.div`
   width: 100%;
@@ -70,14 +70,14 @@ export const VisibleButton = styled.button`
     width: 24px;
     height: 24px;
     cursor: pointer;
-    background: url(${EyeVisible}) no-repeat center center;
+    background: url(${eyeVisible}) no-repeat center center;
   }
 
   &.EyeVisibleOff {
     width: 24px;
     height: 24px;
     cursor: pointer;
-    background: url(${EyeDisabled}) no-repeat center center;
+    background: url(${eyeDisabled}) no-repeat center center;
   }
 `;
 
@@ -94,7 +94,7 @@ export const ErrorMessegg = styled.p`
 
   &::before {
     content: '';
-    background: url(${ErrorIcon});
+    background: url(${errorIcon});
     width: 1.6rem;
     height: 1.6rem;
     display: inline-block;
@@ -106,7 +106,7 @@ export const ErrorMessegg = styled.p`
   &.correct {
     color: var(--Status-Status_Fine);
     &::before {
-      background: url(${CheckIcon});
+      background: url(${checkIcon});
     }
   }
 `;
