@@ -56,7 +56,7 @@ const ComonButton = styled.button`
     props.className === 'point' &&
     css`
       color: var(--Orange, #f45e22);
-      border: 1px solid var(--DarkMode-Grey_600, #434343);
+      box-shadow: 0 0 0 1px var(--DarkMode-Grey_600, #434343) inset;
       background: var(--DarkMode-Grey_900, #212121);
     `}
 

@@ -7,3 +7,4 @@ export { default as klaatooSmall } from './icn_klaatoo_logo_small.svg';
 export { default as klaatooBig } from './icn_klaatoo_logo_big.svg';
 export { default as qrIcon } from './icn_qr_24.svg';
 export { default as gearIcon } from './icn_gear_24.svg';
+export { default as paper } from './icn_paper_fold_24.svg';
